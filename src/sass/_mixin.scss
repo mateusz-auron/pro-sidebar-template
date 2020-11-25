@@ -66,7 +66,7 @@ $scrollbar-color) {
 
         .sidebar-footer {
             background-color: $footer-bg-color;
-            box-shadow: 0px -1px 5px $shadow-color;
+            box-shadow: 0px -5px 5px -5px $shadow-color;
             border-top: 1px solid $border-color;
         }
 
@@ -138,7 +138,7 @@ $scrollbar-color) {
 
             .sidebar-footer {
                 background-color: lighten(rgba($footer-bg-color, .5), 5%);
-                box-shadow: 0px -1px 5px rgba($shadow-color, .8);
+                box-shadow: 0px -5px 5px -5px rgba($shadow-color, .8);
                 border-top: 1px solid lighten($border-color, 5%);
             }
 
