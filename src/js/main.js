@@ -12,44 +12,19 @@ jQuery(function ($) {
     }
   });
 
+  //close sidebar
+  $('#close-sidebar').click(function () {
+    $('.page-wrapper').removeClass('toggled');
+  });
+
+  //open sidebar
+  $('#show-sidebar').click(function () {
+    $('.page-wrapper').addClass('toggled');
+  });
+
   //toggle sidebar
   $('#toggle-sidebar').click(function () {
     $('.page-wrapper').toggleClass('toggled');
-  });
-
-  // bind hover if pinned is initially enabled
-  if ($('.page-wrapper').hasClass('pinned')) {
-    $('#sidebar').hover(
-      function () {
-        console.log('mouseenter');
-        $('.page-wrapper').addClass('sidebar-hovered');
-      },
-      function () {
-        console.log('mouseout');
-        $('.page-wrapper').removeClass('sidebar-hovered');
-      }
-    );
-  }
-
-  //Pin sidebar
-  $('#pin-sidebar').click(function () {
-    if ($('.page-wrapper').hasClass('pinned')) {
-      // unpin sidebar when hovered
-      $('.page-wrapper').removeClass('pinned');
-      $('#sidebar').unbind('hover');
-    } else {
-      $('.page-wrapper').addClass('pinned');
-      $('#sidebar').hover(
-        function () {
-          console.log('mouseenter');
-          $('.page-wrapper').addClass('sidebar-hovered');
-        },
-        function () {
-          console.log('mouseout');
-          $('.page-wrapper').removeClass('sidebar-hovered');
-        }
-      );
-    }
   });
 
   //toggle sidebar overlay
@@ -85,7 +60,7 @@ jQuery(function ($) {
   // toggle border radius
   $('#toggle-border-radius').change(function (e) {
     e.preventDefault();
-    $('.page-wrapper').toggleClass('boder-radius-on');
+    $('.page-wrapper').toggleClass('border-radius-on');
   });
 
   //custom scroll bar is only used on desktop

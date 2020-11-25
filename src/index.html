@@ -28,11 +28,17 @@
 
 <body>
     <div class="page-wrapper default-theme sidebar-bg bg1 toggled">
+        <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+            <i class="fas fa-bars"></i>
+        </a>
         <nav id="sidebar" class="sidebar-wrapper">
             <div class="sidebar-content">
                 <!-- sidebar-brand  -->
                 <div class="sidebar-item sidebar-brand">
                     <a href="#">pro sidebar</a>
+                    <div id="close-sidebar">
+                        <i class="fas fa-times"></i>
+                    </div>
                 </div>
                 <!-- sidebar-header  -->
                 <div class="sidebar-item sidebar-header d-flex flex-nowrap">
@@ -338,11 +344,6 @@
                         <i class="fa fa-power-off"></i>
                     </a>
                 </div>
-                <div class="pinned-footer">
-                    <a href="#">
-                        <i class="fas fa-ellipsis-h"></i>
-                    </a>
-                </div>
             </div>
         </nav>
         <!-- page-content  -->
@@ -358,10 +359,6 @@
                         <a id="toggle-sidebar" class="btn btn-secondary rounded-0" href="#">
                             <span>Toggle Sidebar</span>
                         </a>
-                        <a id="pin-sidebar" class="btn btn-outline-secondary rounded-0" href="#">
-                            <span>Pin Sidebar</span>
-                        </a>
-
                     </div>
                 </div>
                 <hr>

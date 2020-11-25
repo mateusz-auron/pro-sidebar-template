@@ -47,6 +47,15 @@ body {
         background: #ececec;
     }
 
+    #show-sidebar {
+        position: fixed;
+        left: 0;
+        top: 10px;
+        border-radius: 0 4px 4px 0;
+        width: 35px;
+        transition: 0.6s;
+    }
+
     .page-content {
 
         display: inline-block;
@@ -71,8 +80,13 @@ body {
 
     &.toggled {
 
+        #show-sidebar {
+            left: -40px;
+            transition: .3s;
+        }
+
         .sidebar-wrapper {
-            left: 0px;
+            left: 0;
         }
 
         .page-content {
@@ -87,55 +101,6 @@ body {
                 }
             }
         }
-        &.pinned{
-            .page-content {
-
-                @media screen and (min-width: 768px) {
-                    padding-left: $sidebar-pinned-width;
-                }
-            }
-        }
-
-    }
-
-    &.pinned:not(.sidebar-hovered) {
-
-        .sidebar-wrapper {
-            width: $sidebar-pinned-width;
-
-            .sidebar-header {
-                padding: 10px;
-
-                .user-pic {
-                    margin: 0 auto;
-                    width: 50px;
-                    float: none;
-
-                    img {
-                        margin: auto;
-                    }
-                }
-
-            }
-
-            .sidebar-search input,
-            .sidebar-header .user-info,
-            .sidebar-menu .header-menu,
-            .sidebar-menu .sidebar-submenu,
-            .sidebar-menu ul>li>a>span,
-            .sidebar-menu ul>li>a::after,
-            .sidebar-footer>div:not(.pinned-footer) {
-                display: none!important;
-            }
-
-            .sidebar-search .input-group-text {
-                height: 35px;
-            }
-
-            .sidebar-footer>div.pinned-footer {
-                display: block;
-            }          
-        }
 
     }
 
@@ -144,7 +109,7 @@ body {
     }
 
     .mCSB_inside>.mCSB_container {
-        margin-right: 0px;
+        margin-right: 0;
     }
 
 }
